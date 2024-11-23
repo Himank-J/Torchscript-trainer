@@ -21,7 +21,3 @@ dependencies = [
     "torch==2.4.1",
     "torchvision==0.19.1",
 ]
-
-[tool.coverage.report]
-include = ["src/**/*.py"]
-show_missing = true
