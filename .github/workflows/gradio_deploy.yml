@@ -35,7 +35,7 @@ jobs:
 
     - name: Copy trained model
       run: |
-        cp dogbreed_classify/traced_models/model_tracing.pt dogbreed_classify_gradio/traced_models/
+        cp traced_models/model_tracing.pt dogbreed_classify_gradio/traced_models/
 
     - name: Log in to Hugging Face
       run: python -c 'import huggingface_hub; huggingface_hub.login(token="${{ secrets.hf_token }}")'
