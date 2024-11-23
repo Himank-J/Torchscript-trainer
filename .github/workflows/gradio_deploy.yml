@@ -23,6 +23,7 @@ jobs:
       env:
         UV_EXTRA_INDEX_URL: https://download.pytorch.org/whl/cpu
       run: |
+        uv pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
         uv sync
 
     - name: Train model
