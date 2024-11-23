@@ -27,8 +27,7 @@ jobs:
 
     - name: Train model
       run: |
-        cd dogbreed_classify/src
-        python train.py
+        python dogbreed_classify/src/train.py
 
     - name: Create traced_models directory if not exists
       run: mkdir -p dogbreed_classify_gradio/traced_models
