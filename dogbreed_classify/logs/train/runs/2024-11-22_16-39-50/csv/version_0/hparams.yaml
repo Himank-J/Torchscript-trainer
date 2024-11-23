@@ -1,0 +1,8 @@
+base_model: resnet18
+num_classes: 10
+pretrained: true
+lr: 0.001
+weight_decay: 1.0e-05
+factor: 0.1
+patience: 10
+min_lr: 1.0e-06

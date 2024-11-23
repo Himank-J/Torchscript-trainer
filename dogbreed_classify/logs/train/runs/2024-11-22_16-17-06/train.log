@@ -1,0 +1,13 @@
+[2024-11-22 16:17:06,134][__main__][INFO] - Instantiating datamodule <src.datamodules.dogbreed_datamodule.DogBreedDataModule>
+[2024-11-22 16:17:07,014][__main__][INFO] - Instantiating model <src.models.dogbreed_classifier.DogBreedClassifier>
+[2024-11-22 16:17:08,792][timm.models._builder][INFO] - Loading pretrained weights from Hugging Face hub (timm/resnet18.a1_in1k)
+[2024-11-22 16:17:09,265][timm.models._hub][INFO] - [timm/resnet18.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+[2024-11-22 16:17:09,276][timm.models._builder][INFO] - Missing keys (fc.weight, fc.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+[2024-11-22 16:17:09,283][__main__][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-11-22 16:17:09,285][__main__][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-11-22 16:17:09,286][__main__][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-11-22 16:17:09,286][__main__][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-11-22 16:17:09,287][__main__][INFO] - Instantiating logger <lightning.pytorch.loggers.csv_logs.CSVLogger>
+[2024-11-22 16:17:09,290][__main__][INFO] - Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2024-11-22 16:17:09,292][__main__][INFO] - Instantiating trainer <lightning.Trainer>
+[2024-11-22 16:17:09,310][__main__][INFO] - Starting training!

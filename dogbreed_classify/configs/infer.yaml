@@ -1,0 +1,21 @@
+defaults:
+  - _self_
+  - paths: default
+  - hydra: default
+  - data: dogbreed
+
+task_name: "infer"
+
+input_folder: ${paths.data_dir}/input
+output_folder: ${paths.data_dir}/output
+ckpt_path: ${paths.checkpoint_dir}/last.ckpt
+
+# You can override these from the command line
+# e.g., python src/infer.py input_folder=/custom/input/path output_folder=/custom/output/path ckpt_path=/path/to/checkpoint.ckpt
+
+paths:
+  root_dir: ${oc.env:PROJECT_ROOT}
+  data_dir: ${paths.root_dir}/data/
+  log_dir: ${paths.root_dir}/logs/
+  output_dir: ${paths.root_dir}/outputs/
+  checkpoint_dir: ${paths.root_dir}/checkpoints/

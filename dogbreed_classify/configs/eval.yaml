@@ -1,0 +1,37 @@
+# @package _global_
+
+# specify here default configuration
+# python logging level
+
+defaults:
+  - _self_
+  - paths: default.yaml
+  - data: dogbreed.yaml
+  - model: classifier.yaml
+  - trainer: default.yaml
+  - logger: null
+
+task_name: "eval"
+
+# path to checkpoints
+ckpt_path: ${paths.checkpoint_dir}/last.ckpt
+
+# use `python eval.py debug=true` for easy debugging!
+# this will run the evaluation only on a small subset of the data
+debug: False
+
+# disable python warnings if they annoy you
+ignore_warnings: True
+
+# set to True if you don't want to create a new version of the experiment
+# (can be useful for debugging)
+disable_versioning: False
+
+# cache the datamodule to speed up subsequent runs
+cache_datamodule: False
+
+# pretty print config at the start of the run using Rich library
+print_config: True
+
+# seed for random number generators in pytorch, numpy and python.random
+seed: 42

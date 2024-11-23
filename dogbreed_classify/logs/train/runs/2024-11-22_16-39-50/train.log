@@ -1,0 +1,21 @@
+[2024-11-22 16:39:50,599][__main__][INFO] - Instantiating datamodule <src.datamodules.dogbreed_datamodule.DogBreedDataModule>
+[2024-11-22 16:39:50,983][__main__][INFO] - Instantiating model <src.models.dogbreed_classifier.DogBreedClassifier>
+[2024-11-22 16:39:51,561][timm.models._builder][INFO] - Loading pretrained weights from Hugging Face hub (timm/resnet18.a1_in1k)
+[2024-11-22 16:39:51,674][timm.models._hub][INFO] - [timm/resnet18.a1_in1k] Safe alternative available for 'pytorch_model.bin' (as 'model.safetensors'). Loading weights using safetensors.
+[2024-11-22 16:39:51,684][timm.models._builder][INFO] - Missing keys (fc.weight, fc.bias) discovered while loading pretrained weights. This is expected if model is being adapted.
+[2024-11-22 16:39:51,694][__main__][INFO] - Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2024-11-22 16:39:51,700][__main__][INFO] - Instantiating callback <lightning.pytorch.callbacks.EarlyStopping>
+[2024-11-22 16:39:51,702][__main__][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2024-11-22 16:39:51,702][__main__][INFO] - Instantiating callback <lightning.pytorch.callbacks.RichProgressBar>
+[2024-11-22 16:39:51,703][__main__][INFO] - Instantiating logger <lightning.pytorch.loggers.csv_logs.CSVLogger>
+[2024-11-22 16:39:51,706][__main__][INFO] - Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2024-11-22 16:39:51,708][__main__][INFO] - Instantiating trainer <lightning.Trainer>
+[2024-11-22 16:39:51,727][__main__][INFO] - Starting training!
+[2024-11-22 16:42:01,007][__main__][INFO] - Training metrics:
+{'train/loss': tensor(0.6403), 'train/acc': tensor(0.9762), 'val/loss': tensor(0.5960), 'val/acc': tensor(0.9351)}
+[2024-11-22 16:42:01,007][__main__][INFO] - Tracing model...
+[2024-11-22 16:42:01,852][__main__][INFO] - Traced model saved to: traced_models/model_tracing.pt
+[2024-11-22 16:42:01,853][__main__][INFO] - Starting testing!
+[2024-11-22 16:42:01,854][__main__][INFO] - Loading best checkpoint: /workspace/Torchscript-trainer/checkpoints/epoch_001.ckpt
+[2024-11-22 16:42:04,214][__main__][INFO] - Test metrics:
+[{'test/loss': 0.5015521049499512, 'test/acc': 1.0}]

@@ -1,0 +1,46 @@
+name: Train Model and Deploy to HuggingFace
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  train-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    - name: Install uv
+      uses: astral-sh/setup-uv@v2
+
+    - name: Set up Python 3.12
+      run: uv python install 3.12
+
+    - name: Install dependencies
+      env:
+        UV_EXTRA_INDEX_URL: https://download.pytorch.org/whl/cpu
+      run: |
+        uv sync
+
+    - name: Train model
+      run: |
+        cd dogbreed_classify/src
+        python train.py
+
+    - name: Create traced_models directory if not exists
+      run: mkdir -p dogbreed_classify_gradio/traced_models
+
+    - name: Copy trained model
+      run: |
+        cp dogbreed_classify/traced_models/model_tracing.pt dogbreed_classify_gradio/traced_models/
+
+    - name: Log in to Hugging Face
+      run: python -c 'import huggingface_hub; huggingface_hub.login(token="${{ secrets.hf_token }}")'
+
+    - name: Deploy to Spaces
+      run: |
+        cd dogbreed_classify_gradio
+        gradio deploy
