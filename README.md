@@ -1,5 +1,5 @@
 # Dog Breed Classifier using Hydra, TorchScript, and Gradio
-[![Train Model and Deploy to HuggingFace](https://github.com/Himank-J/Torchscript-trainer/actions/workflows/gradio_deploy.yml/badge.svg)](https://github.com/Himank-J/Torchscript-trainer/actions/workflows/gradio_deploy.yml)
+[![Train Model and Deploy to HuggingFace](https://github.com/Himank-J/Torchscript-trainer/actions/workflows/gradio_deploy.yml/badge.svg?branch=main)](https://github.com/Himank-J/Torchscript-trainer/actions/workflows/gradio_deploy.yml)
 
 ## Overview
 This repository contains a PyTorch-based deep learning model for classifying dog breeds. The project demonstrates an end-to-end ML workflow, from model training to deployment, using Github Actions, Hydra, TorchScript, and Gradio.
